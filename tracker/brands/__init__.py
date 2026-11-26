@@ -1,10 +1,11 @@
 from __future__ import annotations
 
 from tracker.brands.base import Brand
+from tracker.brands.musinsa import MUSINSA
 from tracker.brands.uniqlo import UNIQLO
 
-# Later brand modules (musinsa, spao) append themselves here.
-BRANDS: list[Brand] = [UNIQLO]
+# Later brand modules (spao) append themselves here.
+BRANDS: list[Brand] = [UNIQLO, MUSINSA]
 
 
 def brand_for_url(url: str) -> Brand | None:
