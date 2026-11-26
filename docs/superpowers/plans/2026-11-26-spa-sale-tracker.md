@@ -259,7 +259,11 @@ def test_brand_for_url():
 
 ### Task 6: 무신사 스탠다드
 
-Task 5와 같은 구조와 테스트 세트. **Files:** `tracker/brands/musinsa.py`, `tests/brands/test_musinsa.py`. `name = "musinsa"`. 세일 목록은 브랜드 `musinsastandard` 한정, 할인율순으로 `saleRate == 0`이 나오면 중단(페이지 상한 20 유지). 상세 페이지는 쓰지 않는다. `fetch_product`는 `sale_items`에서 product_id로 찾고 없으면 None, `sale_items is None`이면 FetchError — 이 세 경우 테스트 추가. `BRANDS`에 등록. Commit `feat: add Musinsa Standard scraper`. (Task 1 게이트에서 제외로 결정되면 이 Task는 건너뛴다.)
+Task 5와 같은 구조와 테스트 세트. **Files:** `tracker/brands/musinsa.py`, `tests/brands/test_musinsa.py`. `name = "musinsa"`. 세일 목록은 브랜드 `musinsastandard` 한정, DISCOUNT_RATE 정렬, 2페이지부터는 반드시 응답의 서명된 `pagination.nextPageUrl`을 따른다(직접 만든 page=N은 403). 상세 페이지는 쓰지 않는다.
+- `fetch_sale_items`: 화면용으로 20페이지(또는 `saleRate == 0`)에서 멈추고, 마지막 `nextPageUrl`과 지금까지 본 상품을 인스턴스에 보관(실행마다 리셋).
+- `fetch_product(session, url, sale_items)`: `sale_items is None` → FetchError. 보관한 상품에서 product_id를 찾고, 없으면 보관한 `nextPageUrl`부터 이어서 페이지를 넘기며(넘긴 페이지도 보관해 다음 관심 상품이 재사용) 찾는다. 찾으면 Product, `saleRate == 0` 또는 목록 끝에 도달하면 None("세일 아님"), 총 150페이지 상한에 걸리면 FetchError("목록 상한 도달, 확인 불가") — 상한에서 None을 돌려주면 세일 중인 상품이 "세일 아님"이 됐다가 가짜 "세일 시작" 알림이 나기 때문.
+- 테스트: fixture(`sale_list_discount_page1.json`, `sale_list_discount_tail.json`)와 가짜 세션으로 — 20페이지 이후에서 발견, saleRate 0에서 None, 상한에서 FetchError, 두 관심 상품이 페이지를 다시 받지 않음, `sale_items is None` → FetchError.
+`BRANDS`에 등록. Commit `feat: add Musinsa Standard scraper`. (Task 1 게이트에서 제외로 결정되면 이 Task는 건너뛴다.)
 
 ### Task 7: SPAO
 
