@@ -230,3 +230,38 @@ def test_sale_items_deduped_and_sorted(tmp_path):
     run(tmp_path, NOW1, [a], None, send=Sender())
     ids = [i["product_id"] for i in load(tmp_path, "sale_items")["items"]]
     assert ids == ["2", "3", "1"]
+
+
+def test_parser_value_error_is_not_mislabeled_as_price_error(tmp_path):
+    a = FakeBrand("a", products={"1": ValueError("bad json")})
+    setup(tmp_path, ["https://a.test/p/1"])
+    assert run(tmp_path, NOW1, [a], None, send=Sender()) == 0
+    err = load(tmp_path, "watch")["items"]["a:1"]["last_error"]
+    assert err and err != "가격을 읽을 수 없음"
+
+
+def test_unexpected_error_is_logged(tmp_path, capsys):
+    a = FakeBrand("a", products={"1": KeyError("oops")})
+    setup(tmp_path, ["https://a.test/p/1"])
+    run(tmp_path, NOW1, [a], None, send=Sender())
+    out = capsys.readouterr().out
+    assert "a:1" in out and "KeyError" in out
+
+
+def test_drop_mail_not_configured_still_attempts_failure_mail(tmp_path):
+    a = FakeBrand("a", products={"1": prod("a", "1", 800)})
+    setup(tmp_path, ["https://a.test/p/1"])
+    run(tmp_path, NOW1, [a], None, send=Sender())
+    a.fail_sale = True
+    a.products = {"1": prod("a", "1", 700)}
+    for now in (NOW2, "2026-11-26T21:00:00+09:00"):
+        run(tmp_path, now, [a], None, send=Sender())
+    attempts = []
+
+    def send(subject, body):
+        attempts.append(subject)
+        raise MailNotConfigured()
+
+    a.products = {"1": prod("a", "1", 600)}
+    assert run(tmp_path, "2026-11-27T03:00:00+09:00", [a], None, send=send) == 0
+    assert len(attempts) == 2

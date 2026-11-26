@@ -3,6 +3,7 @@ from __future__ import annotations
 import dataclasses
 import json
 import sys
+import traceback
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -124,17 +125,26 @@ def run(root: Path, now: str, brands: list, session, send=send_email) -> int:
                 new_watch[key] = _fill_brand(record_off_sale(existing, url), bname)
                 continue
             product = _complete(product, existing, sale)
+        except Exception as e:  # FetchError and unexpected parser errors
+            if isinstance(e, FetchError):
+                msg = str(e)
+            else:
+                msg = f"예기치 않은 오류: {type(e).__name__}"
+                print(f"[{brand.name}] unexpected error for {key}: "
+                      f"{type(e).__name__}: {e}")
+                traceback.print_exc()
+            new_watch[key] = _fill_brand(record_error(existing, url, msg), bname)
+            continue
+        try:
             entry, drop = record_price(existing, product, now)
-            new_watch[key] = entry
-            if drop:
-                drops.append(drop)
         except ValueError:
             new_watch[key] = _fill_brand(
                 record_error(existing, url, "가격을 읽을 수 없음"), bname
             )
-        except Exception as e:  # FetchError and unexpected parser errors
-            msg = str(e) if isinstance(e, FetchError) else f"예기치 않은 오류: {type(e).__name__}"
-            new_watch[key] = _fill_brand(record_error(existing, url, msg), bname)
+            continue
+        new_watch[key] = entry
+        if drop:
+            drops.append(drop)
 
     # 3. save before sending anything
     new_sale.sort(key=_sort_key)
