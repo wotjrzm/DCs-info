@@ -1,0 +1,71 @@
+{
+ "status": "ok",
+ "result": {
+  "productId": "E486821-000",
+  "name": "쇼트블루종",
+  "priceGroup": "00",
+  "prices": {
+   "base": {
+    "currency": {
+     "code": "KRW",
+     "symbol": "₩"
+    },
+    "value": 79900
+   },
+   "promo": {
+    "currency": {
+     "code": "KRW",
+     "symbol": "₩"
+    },
+    "value": 79900
+   },
+   "isDualPrice": false,
+   "taxPolicy": "INCLUSIVE"
+  },
+  "genderName": "unisex",
+  "representative": {
+   "flags": {
+    "priceFlags": [
+     {
+      "id": 12,
+      "code": "discount",
+      "name": "2026/11/24부터 가격인하",
+      "type": "price_flag",
+      "effectiveTime": {
+       "start": 1795453200
+      },
+      "detail": "",
+      "flagColor": "discount",
+      "nameWording": {
+       "flagWithTime": "text_product_display_markdown",
+       "substitutions": {
+        "flagName": "가격인하",
+        "startDate": "2026/11/24"
+       }
+      }
+     }
+    ],
+    "productFlags": [
+     {
+      "id": 135,
+      "code": "unisex",
+      "name": "UNISEX",
+      "type": "product_flag",
+      "effectiveTime": {},
+      "detail": "",
+      "flagColor": "normal"
+     },
+     {
+      "id": 1,
+      "code": "extraLargeStoreOnly",
+      "name": "리사이클 소재",
+      "type": "product_flag",
+      "effectiveTime": {},
+      "detail": "",
+      "flagColor": "normal"
+     }
+    ]
+   }
+  }
+ }
+}

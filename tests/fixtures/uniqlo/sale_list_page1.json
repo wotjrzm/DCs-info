@@ -1,0 +1,1195 @@
+{
+ "status": "ok",
+ "result": {
+  "aggregations": {},
+  "pagination": {
+   "total": 404,
+   "offset": 0,
+   "count": 36
+  },
+  "relaxedQueries": [],
+  "items": [
+   {
+    "colors": [
+     {
+      "code": "COL30",
+      "displayCode": "30",
+      "name": "NATURAL",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BEIGE"
+     },
+     {
+      "code": "COL03",
+      "displayCode": "03",
+      "name": "GRAY",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "GRAY"
+     }
+    ],
+    "genderName": "WOMEN",
+    "genderCategory": "WOMEN",
+    "sizeGender": "WOMEN",
+    "images": {
+     "main": {
+      "30": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/494712/item/krgoods_30_494712_3x4.jpg",
+       "model": []
+      },
+      "03": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/494712/item/krgoods_03_494712_3x4.jpg",
+       "model": []
+      }
+     }
+    },
+    "l1Id": "494712",
+    "name": "GU스웨트후디 by rokh",
+    "prices": {
+     "base": {
+      "currency": {
+       "code": "KRW",
+       "symbol": "₩"
+      },
+      "value": 39900
+     },
+     "promo": {
+      "currency": {
+       "code": "KRW",
+       "symbol": "₩"
+      },
+      "value": 39900
+     },
+     "isDualPrice": false
+    },
+    "productId": "E494712-000",
+    "priceGroup": "00",
+    "rating": {
+     "average": 4.5,
+     "count": 2
+    },
+    "representativeColorDisplayCode": "30",
+    "representative": {
+     "color": {
+      "code": "COL30",
+      "displayCode": "30",
+      "name": "NATURAL",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BEIGE"
+     },
+     "flags": {
+      "priceFlags": [
+       {
+        "code": "discount",
+        "name": "2026/11/10부터 가격인하",
+        "id": 12,
+        "rank": 7,
+        "type": "price_flag",
+        "isRepresentativeL2Flag": true,
+        "effectiveTime": {
+         "start": 1794243600,
+         "end": 0
+        },
+        "flagColor": "discount",
+        "nameWording": {
+         "flagWithTime": "text_product_display_markdown",
+         "substitutions": {
+          "flagName": "가격인하",
+          "startDate": "2026/11/10"
+         }
+        }
+       }
+      ],
+      "productFlags": [
+       {
+        "code": "onlineOnly",
+        "name": "온라인단독",
+        "id": 8,
+        "rank": 15,
+        "type": "product_flag",
+        "isRepresentativeL2Flag": true,
+        "effectiveTime": {
+         "start": 1788447600,
+         "end": 0
+        },
+        "flagColor": "normal"
+       }
+      ]
+     },
+     "l2Id": "10016194",
+     "pld": {
+      "code": "PTB000",
+      "displayCode": "000",
+      "name": "-",
+      "display": {
+       "showFlag": false,
+       "chipType": 0
+      }
+     },
+     "sales": true,
+     "size": {
+      "code": "SMA003",
+      "displayCode": "003",
+      "name": "S",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      }
+     },
+     "communicationCode": "494712-30-003-000"
+    },
+    "promotionText": "",
+    "storeStockOnly": false
+   },
+   {
+    "colors": [
+     {
+      "code": "COL03",
+      "displayCode": "03",
+      "name": "GRAY",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "GRAY"
+     },
+     {
+      "code": "COL01",
+      "displayCode": "01",
+      "name": "OFF WHITE",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "WHITE"
+     }
+    ],
+    "genderName": "WOMEN",
+    "genderCategory": "WOMEN",
+    "sizeGender": "WOMEN",
+    "images": {
+     "main": {
+      "01": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/494710/item/krgoods_01_494710_3x4.jpg",
+       "model": []
+      },
+      "03": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/494710/item/krgoods_03_494710_3x4.jpg",
+       "model": []
+      }
+     }
+    },
+    "l1Id": "494710",
+    "name": "GU웜립티셔츠(세트) by rokh",
+    "prices": {
+     "base": {
+      "currency": {
+       "code": "KRW",
+       "symbol": "₩"
+      },
+      "value": 19900
+     },
+     "promo": {
+      "currency": {
+       "code": "KRW",
+       "symbol": "₩"
+      },
+      "value": 19900
+     },
+     "isDualPrice": false
+    },
+    "productId": "E494710-000",
+    "priceGroup": "00",
+    "rating": {
+     "average": 5,
+     "count": 3
+    },
+    "representativeColorDisplayCode": "03",
+    "representative": {
+     "color": {
+      "code": "COL03",
+      "displayCode": "03",
+      "name": "GRAY",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "GRAY"
+     },
+     "flags": {
+      "priceFlags": [
+       {
+        "code": "discount",
+        "name": "2026/11/03부터 가격인하",
+        "id": 12,
+        "rank": 7,
+        "type": "price_flag",
+        "isRepresentativeL2Flag": true,
+        "effectiveTime": {
+         "start": 1793638800,
+         "end": 0
+        },
+        "flagColor": "discount",
+        "nameWording": {
+         "flagWithTime": "text_product_display_markdown",
+         "substitutions": {
+          "flagName": "가격인하",
+          "startDate": "2026/11/03"
+         }
+        }
+       }
+      ],
+      "productFlags": [
+       {
+        "code": "onlineOnly",
+        "name": "온라인단독",
+        "id": 8,
+        "rank": 15,
+        "type": "product_flag",
+        "isRepresentativeL2Flag": true,
+        "effectiveTime": {
+         "start": 1788447600,
+         "end": 0
+        },
+        "flagColor": "normal"
+       }
+      ]
+     },
+     "l2Id": "10058287",
+     "pld": {
+      "code": "PTB000",
+      "displayCode": "000",
+      "name": "-",
+      "display": {
+       "showFlag": false,
+       "chipType": 0
+      }
+     },
+     "sales": true,
+     "size": {
+      "code": "SMA003",
+      "displayCode": "003",
+      "name": "S",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      }
+     },
+     "communicationCode": "494710-03-003-000"
+    },
+    "promotionText": "",
+    "storeStockOnly": false
+   },
+   {
+    "colors": [
+     {
+      "code": "COL30",
+      "displayCode": "30",
+      "name": "NATURAL",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BEIGE"
+     },
+     {
+      "code": "COL15",
+      "displayCode": "15",
+      "name": "RED",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "RED"
+     },
+     {
+      "code": "COL69",
+      "displayCode": "69",
+      "name": "NAVY",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BLUE"
+     }
+    ],
+    "genderName": "WOMEN",
+    "genderCategory": "WOMEN",
+    "sizeGender": "WOMEN",
+    "images": {
+     "main": {
+      "15": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/494706/item/krgoods_15_494706_3x4.jpg",
+       "model": []
+      },
+      "30": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/494706/item/krgoods_30_494706_3x4.jpg",
+       "model": []
+      },
+      "69": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/494706/item/krgoods_69_494706_3x4.jpg",
+       "model": []
+      }
+     }
+    },
+    "l1Id": "494706",
+    "name": "GU케이블백리본스웨터 by rokh",
+    "prices": {
+     "base": {
+      "currency": {
+       "code": "KRW",
+       "symbol": "₩"
+      },
+      "value": 39900
+     },
+     "promo": {
+      "currency": {
+       "code": "KRW",
+       "symbol": "₩"
+      },
+      "value": 39900
+     },
+     "isDualPrice": false
+    },
+    "productId": "E494706-000",
+    "priceGroup": "00",
+    "rating": {
+     "average": 5,
+     "count": 4
+    },
+    "representativeColorDisplayCode": "30",
+    "representative": {
+     "color": {
+      "code": "COL30",
+      "displayCode": "30",
+      "name": "NATURAL",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BEIGE"
+     },
+     "flags": {
+      "priceFlags": [
+       {
+        "code": "discount",
+        "name": "2026/11/10부터 가격인하",
+        "id": 12,
+        "rank": 7,
+        "type": "price_flag",
+        "isRepresentativeL2Flag": true,
+        "effectiveTime": {
+         "start": 1794243600,
+         "end": 0
+        },
+        "flagColor": "discount",
+        "nameWording": {
+         "flagWithTime": "text_product_display_markdown",
+         "substitutions": {
+          "flagName": "가격인하",
+          "startDate": "2026/11/10"
+         }
+        }
+       }
+      ],
+      "productFlags": [
+       {
+        "code": "onlineOnly",
+        "name": "온라인단독",
+        "id": 8,
+        "rank": 15,
+        "type": "product_flag",
+        "isRepresentativeL2Flag": true,
+        "effectiveTime": {
+         "start": 1788447600,
+         "end": 0
+        },
+        "flagColor": "normal"
+       }
+      ]
+     },
+     "l2Id": "10022423",
+     "pld": {
+      "code": "PTB000",
+      "displayCode": "000",
+      "name": "-",
+      "display": {
+       "showFlag": false,
+       "chipType": 0
+      }
+     },
+     "sales": true,
+     "size": {
+      "code": "SMA003",
+      "displayCode": "003",
+      "name": "S",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      }
+     },
+     "communicationCode": "494706-30-003-000"
+    },
+    "promotionText": "",
+    "storeStockOnly": false
+   },
+   {
+    "colors": [
+     {
+      "code": "COL38",
+      "displayCode": "38",
+      "name": "DARK BROWN",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BROWN"
+     },
+     {
+      "code": "COL06",
+      "displayCode": "06",
+      "name": "GRAY",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "GRAY"
+     },
+     {
+      "code": "COL41",
+      "displayCode": "41",
+      "name": "YELLOW",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "YELLOW"
+     },
+     {
+      "code": "COL69",
+      "displayCode": "69",
+      "name": "NAVY",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BLUE"
+     }
+    ],
+    "genderName": "WOMEN",
+    "genderCategory": "WOMEN",
+    "sizeGender": "WOMEN",
+    "images": {
+     "main": {
+      "38": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/494705/item/krgoods_38_494705_3x4.jpg",
+       "model": []
+      },
+      "41": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/494705/item/krgoods_41_494705_3x4.jpg",
+       "model": []
+      },
+      "69": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/494705/item/krgoods_69_494705_3x4.jpg",
+       "model": []
+      },
+      "06": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/494705/item/krgoods_06_494705_3x4.jpg",
+       "model": []
+      }
+     }
+    },
+    "l1Id": "494705",
+    "name": "GU퍼피터치컬러콤비스웨터 by rokh",
+    "prices": {
+     "base": {
+      "currency": {
+       "code": "KRW",
+       "symbol": "₩"
+      },
+      "value": 29900
+     },
+     "promo": {
+      "currency": {
+       "code": "KRW",
+       "symbol": "₩"
+      },
+      "value": 29900
+     },
+     "isDualPrice": false
+    },
+    "productId": "E494705-000",
+    "priceGroup": "00",
+    "rating": {
+     "average": 4,
+     "count": 6
+    },
+    "representativeColorDisplayCode": "38",
+    "representative": {
+     "color": {
+      "code": "COL38",
+      "displayCode": "38",
+      "name": "DARK BROWN",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BROWN"
+     },
+     "flags": {
+      "priceFlags": [
+       {
+        "code": "discount",
+        "name": "2026/11/10부터 가격인하",
+        "id": 12,
+        "rank": 7,
+        "type": "price_flag",
+        "isRepresentativeL2Flag": true,
+        "effectiveTime": {
+         "start": 1794243600,
+         "end": 0
+        },
+        "flagColor": "discount",
+        "nameWording": {
+         "flagWithTime": "text_product_display_markdown",
+         "substitutions": {
+          "flagName": "가격인하",
+          "startDate": "2026/11/10"
+         }
+        }
+       }
+      ],
+      "productFlags": [
+       {
+        "code": "onlineOnly",
+        "name": "온라인단독",
+        "id": 8,
+        "rank": 15,
+        "type": "product_flag",
+        "isRepresentativeL2Flag": true,
+        "effectiveTime": {
+         "start": 1788447600,
+         "end": 0
+        },
+        "flagColor": "normal"
+       }
+      ]
+     },
+     "l2Id": "10022407",
+     "pld": {
+      "code": "PTB000",
+      "displayCode": "000",
+      "name": "-",
+      "display": {
+       "showFlag": false,
+       "chipType": 0
+      }
+     },
+     "sales": true,
+     "size": {
+      "code": "SMA003",
+      "displayCode": "003",
+      "name": "S",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      }
+     },
+     "communicationCode": "494705-38-003-000"
+    },
+    "promotionText": "",
+    "storeStockOnly": false
+   },
+   {
+    "colors": [
+     {
+      "code": "COL63",
+      "displayCode": "63",
+      "name": "BLUE",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BLUE"
+     }
+    ],
+    "genderName": "WOMEN",
+    "genderCategory": "WOMEN",
+    "sizeGender": "WOMEN",
+    "images": {
+     "main": {
+      "63": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/494702/item/krgoods_63_494702_3x4.jpg",
+       "model": []
+      }
+     }
+    },
+    "l1Id": "494702",
+    "name": "GU데님스커트 by rokh",
+    "prices": {
+     "base": {
+      "currency": {
+       "code": "KRW",
+       "symbol": "₩"
+      },
+      "value": 39900
+     },
+     "promo": {
+      "currency": {
+       "code": "KRW",
+       "symbol": "₩"
+      },
+      "value": 39900
+     },
+     "isDualPrice": false
+    },
+    "productId": "E494702-000",
+    "priceGroup": "00",
+    "rating": {
+     "average": 5,
+     "count": 2
+    },
+    "representativeColorDisplayCode": "63",
+    "representative": {
+     "color": {
+      "code": "COL63",
+      "displayCode": "63",
+      "name": "BLUE",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BLUE"
+     },
+     "flags": {
+      "priceFlags": [
+       {
+        "code": "discount",
+        "name": "2026/11/03부터 가격인하",
+        "id": 12,
+        "rank": 7,
+        "type": "price_flag",
+        "isRepresentativeL2Flag": true,
+        "effectiveTime": {
+         "start": 1793638800,
+         "end": 0
+        },
+        "flagColor": "discount",
+        "nameWording": {
+         "flagWithTime": "text_product_display_markdown",
+         "substitutions": {
+          "flagName": "가격인하",
+          "startDate": "2026/11/03"
+         }
+        }
+       }
+      ],
+      "productFlags": [
+       {
+        "code": "onlineOnly",
+        "name": "온라인단독",
+        "id": 8,
+        "rank": 15,
+        "type": "product_flag",
+        "isRepresentativeL2Flag": true,
+        "effectiveTime": {
+         "start": 1788447600,
+         "end": 0
+        },
+        "flagColor": "normal"
+       }
+      ]
+     },
+     "l2Id": "10063797",
+     "pld": {
+      "code": "PTB000",
+      "displayCode": "000",
+      "name": "-",
+      "display": {
+       "showFlag": false,
+       "chipType": 0
+      }
+     },
+     "sales": true,
+     "size": {
+      "code": "SMA003",
+      "displayCode": "003",
+      "name": "S",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      }
+     },
+     "communicationCode": "494702-63-003-000"
+    },
+    "promotionText": "",
+    "storeStockOnly": false
+   },
+   {
+    "colors": [
+     {
+      "code": "COL65",
+      "displayCode": "65",
+      "name": "BLUE",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BLUE"
+     },
+     {
+      "code": "COL08",
+      "displayCode": "08",
+      "name": "DARK GRAY",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "GRAY"
+     },
+     {
+      "code": "COL38",
+      "displayCode": "38",
+      "name": "DARK BROWN",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BROWN"
+     }
+    ],
+    "genderName": "WOMEN",
+    "genderCategory": "WOMEN",
+    "sizeGender": "WOMEN",
+    "images": {
+     "main": {
+      "38": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/494700/item/krgoods_38_494700_3x4.jpg",
+       "model": []
+      },
+      "65": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/494700/item/krgoods_65_494700_3x4.jpg",
+       "model": []
+      },
+      "08": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/494700/item/krgoods_08_494700_3x4.jpg",
+       "model": []
+      }
+     }
+    },
+    "l1Id": "494700",
+    "name": "GU배럴유틸리티진 by rokh",
+    "prices": {
+     "base": {
+      "currency": {
+       "code": "KRW",
+       "symbol": "₩"
+      },
+      "value": 39900
+     },
+     "promo": {
+      "currency": {
+       "code": "KRW",
+       "symbol": "₩"
+      },
+      "value": 39900
+     },
+     "isDualPrice": false
+    },
+    "productId": "E494700-000",
+    "priceGroup": "00",
+    "rating": {
+     "average": 4.4,
+     "count": 5
+    },
+    "representativeColorDisplayCode": "65",
+    "representative": {
+     "color": {
+      "code": "COL65",
+      "displayCode": "65",
+      "name": "BLUE",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BLUE"
+     },
+     "flags": {
+      "priceFlags": [
+       {
+        "code": "discount",
+        "name": "2026/11/03부터 가격인하",
+        "id": 12,
+        "rank": 7,
+        "type": "price_flag",
+        "isRepresentativeL2Flag": true,
+        "effectiveTime": {
+         "start": 1793638800,
+         "end": 0
+        },
+        "flagColor": "discount",
+        "nameWording": {
+         "flagWithTime": "text_product_display_markdown",
+         "substitutions": {
+          "flagName": "가격인하",
+          "startDate": "2026/11/03"
+         }
+        }
+       }
+      ],
+      "productFlags": [
+       {
+        "code": "onlineOnly",
+        "name": "온라인단독",
+        "id": 8,
+        "rank": 15,
+        "type": "product_flag",
+        "isRepresentativeL2Flag": true,
+        "effectiveTime": {
+         "start": 1788447600,
+         "end": 0
+        },
+        "flagColor": "normal"
+       }
+      ]
+     },
+     "l2Id": "10063663",
+     "pld": {
+      "code": "PTB000",
+      "displayCode": "000",
+      "name": "-",
+      "display": {
+       "showFlag": false,
+       "chipType": 0
+      }
+     },
+     "sales": true,
+     "size": {
+      "code": "SMA003",
+      "displayCode": "003",
+      "name": "S",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      }
+     },
+     "communicationCode": "494700-65-003-000"
+    },
+    "promotionText": "",
+    "storeStockOnly": false
+   },
+   {
+    "colors": [
+     {
+      "code": "COL67",
+      "displayCode": "67",
+      "name": "BLUE",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BLUE"
+     },
+     {
+      "code": "COL08",
+      "displayCode": "08",
+      "name": "DARK GRAY",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "GRAY"
+     },
+     {
+      "code": "COL69",
+      "displayCode": "69",
+      "name": "NAVY",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BLUE"
+     }
+    ],
+    "genderName": "WOMEN",
+    "genderCategory": "WOMEN",
+    "sizeGender": "WOMEN",
+    "images": {
+     "main": {
+      "67": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/494543/item/krgoods_67_494543_3x4.jpg",
+       "model": [
+        {
+         "modelGender": "Women"
+        }
+       ]
+      },
+      "69": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/494543/item/krgoods_69_494543_3x4.jpg",
+       "model": [
+        {
+         "modelGender": "Women"
+        }
+       ]
+      },
+      "08": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/494543/item/krgoods_08_494543_3x4.jpg",
+       "model": [
+        {
+         "modelGender": "Women"
+        }
+       ]
+      }
+     }
+    },
+    "l1Id": "494543",
+    "name": "EZY데님릴랙스팬츠",
+    "prices": {
+     "base": {
+      "currency": {
+       "code": "KRW",
+       "symbol": "₩"
+      },
+      "value": 39900
+     },
+     "promo": {
+      "currency": {
+       "code": "KRW",
+       "symbol": "₩"
+      },
+      "value": 39900
+     },
+     "isDualPrice": false
+    },
+    "productId": "E494543-000",
+    "priceGroup": "00",
+    "rating": {
+     "average": 0,
+     "count": 0
+    },
+    "representativeColorDisplayCode": "67",
+    "representative": {
+     "color": {
+      "code": "COL67",
+      "displayCode": "67",
+      "name": "BLUE",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BLUE"
+     },
+     "flags": {
+      "priceFlags": [
+       {
+        "code": "discount",
+        "name": "2026/11/17부터 가격인하",
+        "id": 12,
+        "rank": 7,
+        "type": "price_flag",
+        "isRepresentativeL2Flag": true,
+        "effectiveTime": {
+         "start": 1794848400,
+         "end": 0
+        },
+        "flagColor": "discount",
+        "nameWording": {
+         "flagWithTime": "text_product_display_markdown",
+         "substitutions": {
+          "flagName": "가격인하",
+          "startDate": "2026/11/17"
+         }
+        }
+       }
+      ],
+      "productFlags": [
+       {
+        "code": "limitedStore",
+        "name": "일부매장제품",
+        "id": 3,
+        "rank": 16,
+        "type": "product_flag",
+        "isRepresentativeL2Flag": true,
+        "effectiveTime": {
+         "start": 1792076400,
+         "end": 0
+        },
+        "flagColor": "normal"
+       }
+      ]
+     },
+     "l2Id": "09946466",
+     "pld": {
+      "code": "PTB000",
+      "displayCode": "000",
+      "name": "-",
+      "display": {
+       "showFlag": false,
+       "chipType": 0
+      }
+     },
+     "sales": true,
+     "size": {
+      "code": "SMA002",
+      "displayCode": "002",
+      "name": "XS",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      }
+     },
+     "communicationCode": "494543-67-002-000"
+    },
+    "promotionText": "",
+    "storeStockOnly": false
+   },
+   {
+    "colors": [
+     {
+      "code": "COL36",
+      "displayCode": "36",
+      "name": "BROWN",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BROWN"
+     },
+     {
+      "code": "COL09",
+      "displayCode": "09",
+      "name": "BLACK",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BLACK"
+     }
+    ],
+    "genderName": "WOMEN",
+    "genderCategory": "WOMEN",
+    "sizeGender": "WOMEN",
+    "images": {
+     "main": {
+      "36": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/493595/item/krgoods_36_493595_3x4.jpg",
+       "model": []
+      },
+      "09": {
+       "image": "https://image.uniqlo.com/UQ/ST3/kr/imagesgoods/493595/item/krgoods_09_493595_3x4.jpg",
+       "model": []
+      }
+     }
+    },
+    "l1Id": "493595",
+    "name": "GU벌룬팬츠(체크)",
+    "prices": {
+     "base": {
+      "currency": {
+       "code": "KRW",
+       "symbol": "₩"
+      },
+      "value": 19900
+     },
+     "promo": {
+      "currency": {
+       "code": "KRW",
+       "symbol": "₩"
+      },
+      "value": 19900
+     },
+     "isDualPrice": false
+    },
+    "productId": "E493595-000",
+    "priceGroup": "00",
+    "rating": {
+     "average": 0,
+     "count": 0
+    },
+    "representativeColorDisplayCode": "36",
+    "representative": {
+     "color": {
+      "code": "COL36",
+      "displayCode": "36",
+      "name": "BROWN",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      },
+      "filterCode": "BROWN"
+     },
+     "flags": {
+      "priceFlags": [
+       {
+        "code": "discount",
+        "name": "2026/11/03부터 가격인하",
+        "id": 12,
+        "rank": 7,
+        "type": "price_flag",
+        "isRepresentativeL2Flag": true,
+        "effectiveTime": {
+         "start": 1793638800,
+         "end": 0
+        },
+        "flagColor": "discount",
+        "nameWording": {
+         "flagWithTime": "text_product_display_markdown",
+         "substitutions": {
+          "flagName": "가격인하",
+          "startDate": "2026/11/03"
+         }
+        }
+       }
+      ],
+      "productFlags": [
+       {
+        "code": "onlineOnly",
+        "name": "온라인단독",
+        "id": 8,
+        "rank": 15,
+        "type": "product_flag",
+        "isRepresentativeL2Flag": true,
+        "effectiveTime": {
+         "start": 1788447600,
+         "end": 0
+        },
+        "flagColor": "normal"
+       }
+      ]
+     },
+     "l2Id": "09899469",
+     "pld": {
+      "code": "PTB000",
+      "displayCode": "000",
+      "name": "-",
+      "display": {
+       "showFlag": false,
+       "chipType": 0
+      }
+     },
+     "sales": true,
+     "size": {
+      "code": "SMA003",
+      "displayCode": "003",
+      "name": "S",
+      "display": {
+       "showFlag": true,
+       "chipType": 0
+      }
+     },
+     "communicationCode": "493595-36-003-000"
+    },
+    "promotionText": "",
+    "storeStockOnly": false
+   }
+  ],
+  "relaxedQueryItems": []
+ }
+}

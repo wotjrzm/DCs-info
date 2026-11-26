@@ -1,0 +1,37 @@
+{
+ "status": "ok",
+ "result": {
+  "productId": "E465187-000",
+  "name": "드라이컬러크루넥T",
+  "priceGroup": "00",
+  "prices": {
+   "base": {
+    "currency": {
+     "code": "KRW",
+     "symbol": "₩"
+    },
+    "value": 7900
+   },
+   "promo": null,
+   "isDualPrice": false,
+   "taxPolicy": "INCLUSIVE"
+  },
+  "genderName": "men",
+  "representative": {
+   "flags": {
+    "priceFlags": [],
+    "productFlags": [
+     {
+      "id": 1,
+      "code": "extraLargeStoreOnly",
+      "name": "리사이클 소재",
+      "type": "product_flag",
+      "effectiveTime": {},
+      "detail": "",
+      "flagColor": "normal"
+     }
+    ]
+   }
+  }
+ }
+}

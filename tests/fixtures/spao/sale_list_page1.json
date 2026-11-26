@@ -1,0 +1,921 @@
+{
+ "resultCode": "200",
+ "resultMessage": "success",
+ "data": [
+  {
+   "cornerNo": "",
+   "dispContentsGroupNo": "",
+   "dispContentsGroupName": "",
+   "dispStartTs": "",
+   "dispEndTs": "",
+   "itemNo": "2607013428",
+   "itemName": "[씬라이트] 후드 재킷_SPJPG4TC24",
+   "dispCategoryNo": "",
+   "dispCategoryName": "",
+   "itemTcode": "10",
+   "brandNo": "",
+   "brandName": "[공식] 스파오",
+   "sellStartTs": "2026-10-27 11:11:13",
+   "sellEndTs": "",
+   "beforesellDispPossYn": "N",
+   "beforesellDispStartTs": "",
+   "sellStartCountingApplyYn": "N",
+   "manualApplyCouponPossYn": "Y",
+   "autoImmedDcPossYn": "Y",
+   "dcRate": 10,
+   "orgSellprice": 59900,
+   "sellprice": 53910,
+   "finalDcPrice": 53910,
+   "appFinalDcPrice": 53910,
+   "reviewScoreDecimalpoint": 0.0,
+   "reviewScore": 0,
+   "reviewCount": 0,
+   "flagName": "",
+   "flagImgPath": "",
+   "wishYn": "",
+   "dealYn": "N",
+   "badgeName": [],
+   "orderCount": "",
+   "vendNo": "",
+   "lowerVendNo": "LV26000002",
+   "iconName": [
+    "BEST",
+    "HIT"
+   ],
+   "representImagePath": "r/image/item/2026-11-25/6d0df925-23c2-407d-a411-99641136e1a1.jpg",
+   "image": [
+    {
+     "imageDcode": "010",
+     "imageNo": "2611250230156",
+     "imageFileName": "",
+     "imagePath": "r/image/item/2026-11-25/6d0df925-23c2-407d-a411-99641136e1a1.jpg",
+     "imageName": ""
+    }
+   ],
+   "videoLink": "",
+   "immidiatepurchaseYn": "",
+   "marketingData": "i_2607013428_1",
+   "itemSellPossYn": "Y",
+   "reservationYn": "N",
+   "reservationSellYn": "N",
+   "sellingpointCon": "",
+   "rbestFluctuationRank": "",
+   "updateTime": "",
+   "reqId": "",
+   "colorChip": [
+    {
+     "colorNo": "0000001",
+     "colorName": "화이트",
+     "hexCode": "#FFFFFF"
+    },
+    {
+     "colorNo": "0000002",
+     "colorName": "그레이",
+     "hexCode": "#B8BAB9"
+    },
+    {
+     "colorNo": "0000003",
+     "colorName": "블랙",
+     "hexCode": "#111111"
+    },
+    {
+     "colorNo": "0000007",
+     "colorName": "핑크",
+     "hexCode": "#E36C9D"
+    },
+    {
+     "colorNo": "0000009",
+     "colorName": "옐로우",
+     "hexCode": "#F0E601"
+    },
+    {
+     "colorNo": "0000010",
+     "colorName": "브라운",
+     "hexCode": "#8D5C33"
+    },
+    {
+     "colorNo": "0000011",
+     "colorName": "그린",
+     "hexCode": "#00863E"
+    },
+    {
+     "colorNo": "0000013",
+     "colorName": "블루",
+     "hexCode": "#003989"
+    },
+    {
+     "colorNo": "0000015",
+     "colorName": "퍼플",
+     "hexCode": "#782482"
+    }
+   ],
+   "total": 0,
+   "dispOrder": 0,
+   "itemFlags": [
+    "공용",
+    "XS-XXXL"
+   ],
+   "discontinuedYn": "N",
+   "sellEndYn": "N",
+   "upcomingYn": "N",
+   "unavailableYn": "N",
+   "soldOutYn": "N",
+   "saleStatus": "AVAILABLE",
+   "saleFlag": "",
+   "saleCode": "10"
+  },
+  {
+   "cornerNo": "",
+   "dispContentsGroupNo": "",
+   "dispContentsGroupName": "",
+   "dispStartTs": "",
+   "dispEndTs": "",
+   "itemNo": "2607012769",
+   "itemName": "[리사이클] 베이직 퍼플리스 집업_SPFZG4TC01",
+   "dispCategoryNo": "",
+   "dispCategoryName": "",
+   "itemTcode": "10",
+   "brandNo": "",
+   "brandName": "[공식] 스파오",
+   "sellStartTs": "2026-08-24 08:01:00",
+   "sellEndTs": "",
+   "beforesellDispPossYn": "N",
+   "beforesellDispStartTs": "",
+   "sellStartCountingApplyYn": "N",
+   "manualApplyCouponPossYn": "Y",
+   "autoImmedDcPossYn": "Y",
+   "dcRate": 10,
+   "orgSellprice": 29900,
+   "sellprice": 26900,
+   "finalDcPrice": 26900,
+   "appFinalDcPrice": 26900,
+   "reviewScoreDecimalpoint": 0.0,
+   "reviewScore": 0,
+   "reviewCount": 0,
+   "flagName": "",
+   "flagImgPath": "",
+   "wishYn": "",
+   "dealYn": "N",
+   "badgeName": [],
+   "orderCount": "",
+   "vendNo": "",
+   "lowerVendNo": "LV26000002",
+   "iconName": [
+    "BEST",
+    "HIT"
+   ],
+   "representImagePath": "r/image/item/2026-11-03/9e62e4a8-b2d7-4a56-9cc0-edcc9f706b2a.jpg",
+   "image": [
+    {
+     "imageDcode": "010",
+     "imageNo": "2611030208446",
+     "imageFileName": "",
+     "imagePath": "r/image/item/2026-11-03/9e62e4a8-b2d7-4a56-9cc0-edcc9f706b2a.jpg",
+     "imageName": ""
+    }
+   ],
+   "videoLink": "",
+   "immidiatepurchaseYn": "",
+   "marketingData": "i_2607012769_2",
+   "itemSellPossYn": "Y",
+   "reservationYn": "N",
+   "reservationSellYn": "N",
+   "sellingpointCon": "",
+   "rbestFluctuationRank": "",
+   "updateTime": "",
+   "reqId": "",
+   "colorChip": [
+    {
+     "colorNo": "0000001",
+     "colorName": "화이트",
+     "hexCode": "#FFFFFF"
+    },
+    {
+     "colorNo": "0000002",
+     "colorName": "그레이",
+     "hexCode": "#B8BAB9"
+    },
+    {
+     "colorNo": "0000003",
+     "colorName": "블랙",
+     "hexCode": "#111111"
+    },
+    {
+     "colorNo": "0000004",
+     "colorName": "베이지",
+     "hexCode": "#D9C9A3"
+    },
+    {
+     "colorNo": "0000005",
+     "colorName": "레드",
+     "hexCode": "#C30109"
+    },
+    {
+     "colorNo": "0000006",
+     "colorName": "버건디",
+     "hexCode": "#6D000A"
+    },
+    {
+     "colorNo": "0000007",
+     "colorName": "핑크",
+     "hexCode": "#E36C9D"
+    },
+    {
+     "colorNo": "0000009",
+     "colorName": "옐로우",
+     "hexCode": "#F0E601"
+    },
+    {
+     "colorNo": "0000011",
+     "colorName": "그린",
+     "hexCode": "#00863E"
+    },
+    {
+     "colorNo": "0000013",
+     "colorName": "블루",
+     "hexCode": "#003989"
+    },
+    {
+     "colorNo": "0000014",
+     "colorName": "네이비",
+     "hexCode": "#03175E"
+    },
+    {
+     "colorNo": "0000015",
+     "colorName": "퍼플",
+     "hexCode": "#782482"
+    }
+   ],
+   "total": 0,
+   "dispOrder": 0,
+   "itemFlags": [
+    "공용",
+    "XS-XXL"
+   ],
+   "discontinuedYn": "N",
+   "sellEndYn": "N",
+   "upcomingYn": "N",
+   "unavailableYn": "N",
+   "soldOutYn": "N",
+   "saleStatus": "AVAILABLE",
+   "saleFlag": "",
+   "saleCode": "10"
+  },
+  {
+   "cornerNo": "",
+   "dispContentsGroupNo": "",
+   "dispContentsGroupName": "",
+   "dispStartTs": "",
+   "dispEndTs": "",
+   "itemNo": "2607013429",
+   "itemName": "베이직 푸퍼_SPJPG4TC11",
+   "dispCategoryNo": "",
+   "dispCategoryName": "",
+   "itemTcode": "10",
+   "brandNo": "",
+   "brandName": "[공식] 스파오",
+   "sellStartTs": "2026-08-24 08:01:00",
+   "sellEndTs": "",
+   "beforesellDispPossYn": "N",
+   "beforesellDispStartTs": "",
+   "sellStartCountingApplyYn": "N",
+   "manualApplyCouponPossYn": "Y",
+   "autoImmedDcPossYn": "Y",
+   "dcRate": 14,
+   "orgSellprice": 69900,
+   "sellprice": 59900,
+   "finalDcPrice": 59900,
+   "appFinalDcPrice": 59900,
+   "reviewScoreDecimalpoint": 0.0,
+   "reviewScore": 0,
+   "reviewCount": 0,
+   "flagName": "",
+   "flagImgPath": "",
+   "wishYn": "",
+   "dealYn": "N",
+   "badgeName": [],
+   "orderCount": "",
+   "vendNo": "",
+   "lowerVendNo": "LV26000002",
+   "iconName": [
+    "BEST",
+    "HIT"
+   ],
+   "representImagePath": "r/image/item/2026-11-19/0e24b40b-b066-42e9-9a62-d56b99969e80.jpg",
+   "image": [
+    {
+     "imageDcode": "010",
+     "imageNo": "2611260230834",
+     "imageFileName": "",
+     "imagePath": "r/image/item/2026-11-19/0e24b40b-b066-42e9-9a62-d56b99969e80.jpg",
+     "imageName": ""
+    }
+   ],
+   "videoLink": "",
+   "immidiatepurchaseYn": "",
+   "marketingData": "i_2607013429_3",
+   "itemSellPossYn": "Y",
+   "reservationYn": "N",
+   "reservationSellYn": "N",
+   "sellingpointCon": "",
+   "rbestFluctuationRank": "",
+   "updateTime": "",
+   "reqId": "",
+   "colorChip": [
+    {
+     "colorNo": "0000001",
+     "colorName": "화이트",
+     "hexCode": "#FFFFFF"
+    },
+    {
+     "colorNo": "0000002",
+     "colorName": "그레이",
+     "hexCode": "#B8BAB9"
+    },
+    {
+     "colorNo": "0000003",
+     "colorName": "블랙",
+     "hexCode": "#111111"
+    },
+    {
+     "colorNo": "0000010",
+     "colorName": "브라운",
+     "hexCode": "#8D5C33"
+    },
+    {
+     "colorNo": "0000016",
+     "colorName": "믹스/패턴",
+     "hexCode": "mix"
+    }
+   ],
+   "total": 0,
+   "dispOrder": 0,
+   "itemFlags": [
+    "공용",
+    "XS-XXL"
+   ],
+   "discontinuedYn": "N",
+   "sellEndYn": "N",
+   "upcomingYn": "N",
+   "unavailableYn": "N",
+   "soldOutYn": "N",
+   "saleStatus": "AVAILABLE",
+   "saleFlag": "",
+   "saleCode": "10"
+  },
+  {
+   "cornerNo": "",
+   "dispContentsGroupNo": "",
+   "dispContentsGroupName": "",
+   "dispStartTs": "",
+   "dispEndTs": "",
+   "itemNo": "2607013425",
+   "itemName": "[씬라이트] 여성 후드 재킷_SPJPG4TG24",
+   "dispCategoryNo": "",
+   "dispCategoryName": "",
+   "itemTcode": "10",
+   "brandNo": "",
+   "brandName": "[공식] 스파오",
+   "sellStartTs": "2026-08-24 08:01:00",
+   "sellEndTs": "",
+   "beforesellDispPossYn": "N",
+   "beforesellDispStartTs": "2026-08-24 00:00:00",
+   "sellStartCountingApplyYn": "N",
+   "manualApplyCouponPossYn": "Y",
+   "autoImmedDcPossYn": "Y",
+   "dcRate": 10,
+   "orgSellprice": 59900,
+   "sellprice": 53910,
+   "finalDcPrice": 53910,
+   "appFinalDcPrice": 53910,
+   "reviewScoreDecimalpoint": 0.0,
+   "reviewScore": 0,
+   "reviewCount": 0,
+   "flagName": "",
+   "flagImgPath": "",
+   "wishYn": "",
+   "dealYn": "N",
+   "badgeName": [],
+   "orderCount": "",
+   "vendNo": "",
+   "lowerVendNo": "LV26000002",
+   "iconName": [
+    "BEST",
+    "HIT"
+   ],
+   "representImagePath": "r/image/item/2026-11-25/9a7686c1-afa2-4d26-9f6a-d55f580bb9d8.jpg",
+   "image": [
+    {
+     "imageDcode": "010",
+     "imageNo": "2611250230206",
+     "imageFileName": "",
+     "imagePath": "r/image/item/2026-11-25/9a7686c1-afa2-4d26-9f6a-d55f580bb9d8.jpg",
+     "imageName": ""
+    }
+   ],
+   "videoLink": "",
+   "immidiatepurchaseYn": "",
+   "marketingData": "i_2607013425_4",
+   "itemSellPossYn": "Y",
+   "reservationYn": "N",
+   "reservationSellYn": "N",
+   "sellingpointCon": "",
+   "rbestFluctuationRank": "",
+   "updateTime": "",
+   "reqId": "",
+   "colorChip": [
+    {
+     "colorNo": "0000001",
+     "colorName": "화이트",
+     "hexCode": "#FFFFFF"
+    },
+    {
+     "colorNo": "0000002",
+     "colorName": "그레이",
+     "hexCode": "#B8BAB9"
+    },
+    {
+     "colorNo": "0000003",
+     "colorName": "블랙",
+     "hexCode": "#111111"
+    },
+    {
+     "colorNo": "0000007",
+     "colorName": "핑크",
+     "hexCode": "#E36C9D"
+    },
+    {
+     "colorNo": "0000013",
+     "colorName": "블루",
+     "hexCode": "#003989"
+    },
+    {
+     "colorNo": "0000015",
+     "colorName": "퍼플",
+     "hexCode": "#782482"
+    }
+   ],
+   "total": 0,
+   "dispOrder": 0,
+   "itemFlags": [
+    "공용",
+    "S-L"
+   ],
+   "discontinuedYn": "N",
+   "sellEndYn": "N",
+   "upcomingYn": "N",
+   "unavailableYn": "N",
+   "soldOutYn": "N",
+   "saleStatus": "AVAILABLE",
+   "saleFlag": "",
+   "saleCode": "10"
+  },
+  {
+   "cornerNo": "",
+   "dispContentsGroupNo": "",
+   "dispContentsGroupName": "",
+   "dispStartTs": "",
+   "dispEndTs": "",
+   "itemNo": "2607014715",
+   "itemName": "파스텔 푸퍼_SPJPG4TG11",
+   "dispCategoryNo": "",
+   "dispCategoryName": "",
+   "itemTcode": "10",
+   "brandNo": "",
+   "brandName": "[공식] 스파오",
+   "sellStartTs": "2026-07-28 14:45:04",
+   "sellEndTs": "",
+   "beforesellDispPossYn": "N",
+   "beforesellDispStartTs": "",
+   "sellStartCountingApplyYn": "N",
+   "manualApplyCouponPossYn": "Y",
+   "autoImmedDcPossYn": "Y",
+   "dcRate": 14,
+   "orgSellprice": 69900,
+   "sellprice": 59900,
+   "finalDcPrice": 59900,
+   "appFinalDcPrice": 59900,
+   "reviewScoreDecimalpoint": 0.0,
+   "reviewScore": 0,
+   "reviewCount": 0,
+   "flagName": "",
+   "flagImgPath": "",
+   "wishYn": "",
+   "dealYn": "N",
+   "badgeName": [],
+   "orderCount": "",
+   "vendNo": "",
+   "lowerVendNo": "LV26000002",
+   "iconName": [
+    "BEST",
+    "HIT"
+   ],
+   "representImagePath": "r/image/item/2026-10-20/e829ea23-6703-48f5-9c6a-9cdd166bbde7.jpg",
+   "image": [
+    {
+     "imageDcode": "010",
+     "imageNo": "2611190225106",
+     "imageFileName": "",
+     "imagePath": "r/image/item/2026-10-20/e829ea23-6703-48f5-9c6a-9cdd166bbde7.jpg",
+     "imageName": ""
+    }
+   ],
+   "videoLink": "",
+   "immidiatepurchaseYn": "",
+   "marketingData": "i_2607014715_5",
+   "itemSellPossYn": "Y",
+   "reservationYn": "N",
+   "reservationSellYn": "N",
+   "sellingpointCon": "",
+   "rbestFluctuationRank": "",
+   "updateTime": "",
+   "reqId": "",
+   "colorChip": [
+    {
+     "colorNo": "0000001",
+     "colorName": "화이트",
+     "hexCode": "#FFFFFF"
+    },
+    {
+     "colorNo": "0000003",
+     "colorName": "블랙",
+     "hexCode": "#111111"
+    },
+    {
+     "colorNo": "0000007",
+     "colorName": "핑크",
+     "hexCode": "#E36C9D"
+    },
+    {
+     "colorNo": "0000010",
+     "colorName": "브라운",
+     "hexCode": "#8D5C33"
+    },
+    {
+     "colorNo": "0000016",
+     "colorName": "믹스/패턴",
+     "hexCode": "mix"
+    }
+   ],
+   "total": 0,
+   "dispOrder": 0,
+   "itemFlags": [
+    "공용",
+    "S-L"
+   ],
+   "discontinuedYn": "N",
+   "sellEndYn": "N",
+   "upcomingYn": "N",
+   "unavailableYn": "N",
+   "soldOutYn": "N",
+   "saleStatus": "AVAILABLE",
+   "saleFlag": "",
+   "saleCode": "10"
+  },
+  {
+   "cornerNo": "",
+   "dispContentsGroupNo": "",
+   "dispContentsGroupName": "",
+   "dispStartTs": "",
+   "dispEndTs": "",
+   "itemNo": "2610022967",
+   "itemName": "배색 플리스 반오픈 풀오버 (RE)_SPFWH11C03",
+   "dispCategoryNo": "",
+   "dispCategoryName": "",
+   "itemTcode": "10",
+   "brandNo": "",
+   "brandName": "[공식] 스파오",
+   "sellStartTs": "2026-10-26 14:55:23",
+   "sellEndTs": "",
+   "beforesellDispPossYn": "N",
+   "beforesellDispStartTs": "",
+   "sellStartCountingApplyYn": "N",
+   "manualApplyCouponPossYn": "Y",
+   "autoImmedDcPossYn": "Y",
+   "dcRate": 7,
+   "orgSellprice": 39900,
+   "sellprice": 36900,
+   "finalDcPrice": 36900,
+   "appFinalDcPrice": 36900,
+   "reviewScoreDecimalpoint": 0.0,
+   "reviewScore": 0,
+   "reviewCount": 0,
+   "flagName": "",
+   "flagImgPath": "",
+   "wishYn": "",
+   "dealYn": "N",
+   "badgeName": [],
+   "orderCount": "",
+   "vendNo": "",
+   "lowerVendNo": "LV26000003",
+   "iconName": [
+    "BEST",
+    "HIT"
+   ],
+   "representImagePath": "r/image/item/2026-11-19/5a2e8b53-00a2-47f2-9957-04c303665654.jpg",
+   "image": [
+    {
+     "imageDcode": "010",
+     "imageNo": "2611250229615",
+     "imageFileName": "",
+     "imagePath": "r/image/item/2026-11-19/5a2e8b53-00a2-47f2-9957-04c303665654.jpg",
+     "imageName": ""
+    }
+   ],
+   "videoLink": "",
+   "immidiatepurchaseYn": "",
+   "marketingData": "i_2610022967_6",
+   "itemSellPossYn": "Y",
+   "reservationYn": "N",
+   "reservationSellYn": "N",
+   "sellingpointCon": "",
+   "rbestFluctuationRank": "",
+   "updateTime": "",
+   "reqId": "",
+   "colorChip": [
+    {
+     "colorNo": "0000002",
+     "colorName": "그레이",
+     "hexCode": "#B8BAB9"
+    },
+    {
+     "colorNo": "0000003",
+     "colorName": "블랙",
+     "hexCode": "#111111"
+    },
+    {
+     "colorNo": "0000004",
+     "colorName": "베이지",
+     "hexCode": "#D9C9A3"
+    },
+    {
+     "colorNo": "0000007",
+     "colorName": "핑크",
+     "hexCode": "#E36C9D"
+    },
+    {
+     "colorNo": "0000010",
+     "colorName": "브라운",
+     "hexCode": "#8D5C33"
+    },
+    {
+     "colorNo": "0000011",
+     "colorName": "그린",
+     "hexCode": "#00863E"
+    },
+    {
+     "colorNo": "0000014",
+     "colorName": "네이비",
+     "hexCode": "#03175E"
+    },
+    {
+     "colorNo": "0000015",
+     "colorName": "퍼플",
+     "hexCode": "#782482"
+    },
+    {
+     "colorNo": "0000186",
+     "colorName": "다크 그린",
+     "hexCode": "#013311"
+    }
+   ],
+   "total": 0,
+   "dispOrder": 0,
+   "itemFlags": [
+    "공용",
+    "S-XL"
+   ],
+   "discontinuedYn": "N",
+   "sellEndYn": "N",
+   "upcomingYn": "N",
+   "unavailableYn": "N",
+   "soldOutYn": "N",
+   "saleStatus": "AVAILABLE",
+   "saleFlag": "",
+   "saleCode": "10"
+  },
+  {
+   "cornerNo": "",
+   "dispContentsGroupNo": "",
+   "dispContentsGroupName": "",
+   "dispStartTs": "",
+   "dispEndTs": "",
+   "itemNo": "2611024204",
+   "itemName": "베이직 퍼플리스 집업 (RE)_SPFZH11C01",
+   "dispCategoryNo": "",
+   "dispCategoryName": "",
+   "itemTcode": "10",
+   "brandNo": "",
+   "brandName": "[공식] 스파오",
+   "sellStartTs": "2026-11-13 15:30:00",
+   "sellEndTs": "",
+   "beforesellDispPossYn": "N",
+   "beforesellDispStartTs": "",
+   "sellStartCountingApplyYn": "N",
+   "manualApplyCouponPossYn": "Y",
+   "autoImmedDcPossYn": "Y",
+   "dcRate": 10,
+   "orgSellprice": 29900,
+   "sellprice": 26900,
+   "finalDcPrice": 26900,
+   "appFinalDcPrice": 26900,
+   "reviewScoreDecimalpoint": 0.0,
+   "reviewScore": 0,
+   "reviewCount": 0,
+   "flagName": "",
+   "flagImgPath": "",
+   "wishYn": "",
+   "dealYn": "N",
+   "badgeName": [],
+   "orderCount": "",
+   "vendNo": "",
+   "lowerVendNo": "LV26000002",
+   "iconName": [
+    "BEST",
+    "HIT"
+   ],
+   "representImagePath": "r/image/item/2026-11-25/9b39d499-8ee8-48d7-b721-0eeffab9c0e4.jpg",
+   "image": [
+    {
+     "imageDcode": "010",
+     "imageNo": "2611250228965",
+     "imageFileName": "",
+     "imagePath": "r/image/item/2026-11-25/9b39d499-8ee8-48d7-b721-0eeffab9c0e4.jpg",
+     "imageName": ""
+    }
+   ],
+   "videoLink": "",
+   "immidiatepurchaseYn": "",
+   "marketingData": "i_2611024204_7",
+   "itemSellPossYn": "Y",
+   "reservationYn": "N",
+   "reservationSellYn": "N",
+   "sellingpointCon": "",
+   "rbestFluctuationRank": "",
+   "updateTime": "",
+   "reqId": "",
+   "colorChip": [
+    {
+     "colorNo": "0000001",
+     "colorName": "화이트",
+     "hexCode": "#FFFFFF"
+    },
+    {
+     "colorNo": "0000002",
+     "colorName": "그레이",
+     "hexCode": "#B8BAB9"
+    },
+    {
+     "colorNo": "0000003",
+     "colorName": "블랙",
+     "hexCode": "#111111"
+    },
+    {
+     "colorNo": "0000004",
+     "colorName": "베이지",
+     "hexCode": "#D9C9A3"
+    },
+    {
+     "colorNo": "0000007",
+     "colorName": "핑크",
+     "hexCode": "#E36C9D"
+    },
+    {
+     "colorNo": "0000009",
+     "colorName": "옐로우",
+     "hexCode": "#F0E601"
+    },
+    {
+     "colorNo": "0000011",
+     "colorName": "그린",
+     "hexCode": "#00863E"
+    },
+    {
+     "colorNo": "0000013",
+     "colorName": "블루",
+     "hexCode": "#003989"
+    },
+    {
+     "colorNo": "0000014",
+     "colorName": "네이비",
+     "hexCode": "#03175E"
+    }
+   ],
+   "total": 0,
+   "dispOrder": 0,
+   "itemFlags": [
+    "공용",
+    "XS-XXL"
+   ],
+   "discontinuedYn": "N",
+   "sellEndYn": "N",
+   "upcomingYn": "N",
+   "unavailableYn": "N",
+   "soldOutYn": "N",
+   "saleStatus": "AVAILABLE",
+   "saleFlag": "",
+   "saleCode": "10"
+  },
+  {
+   "cornerNo": "",
+   "dispContentsGroupNo": "",
+   "dispContentsGroupName": "",
+   "dispStartTs": "",
+   "dispEndTs": "",
+   "itemNo": "2608017396",
+   "itemName": "[신세틱레더] 퍼배색 무스탕_SPJLG4VW01",
+   "dispCategoryNo": "",
+   "dispCategoryName": "",
+   "itemTcode": "10",
+   "brandNo": "",
+   "brandName": "[공식] 스파오",
+   "sellStartTs": "2026-08-24 12:45:37",
+   "sellEndTs": "",
+   "beforesellDispPossYn": "N",
+   "beforesellDispStartTs": "",
+   "sellStartCountingApplyYn": "N",
+   "manualApplyCouponPossYn": "Y",
+   "autoImmedDcPossYn": "Y",
+   "dcRate": 20,
+   "orgSellprice": 99900,
+   "sellprice": 79900,
+   "finalDcPrice": 79900,
+   "appFinalDcPrice": 79900,
+   "reviewScoreDecimalpoint": 0.0,
+   "reviewScore": 0,
+   "reviewCount": 0,
+   "flagName": "",
+   "flagImgPath": "",
+   "wishYn": "",
+   "dealYn": "N",
+   "badgeName": [],
+   "orderCount": "",
+   "vendNo": "",
+   "lowerVendNo": "LV26000002",
+   "iconName": [
+    "HIT"
+   ],
+   "representImagePath": "r/image/item/2026-10-30/c6cad731-3ac9-4055-a819-afad127f93de.jpg",
+   "image": [
+    {
+     "imageDcode": "010",
+     "imageNo": "2610300207046",
+     "imageFileName": "",
+     "imagePath": "r/image/item/2026-10-30/c6cad731-3ac9-4055-a819-afad127f93de.jpg",
+     "imageName": ""
+    }
+   ],
+   "videoLink": "",
+   "immidiatepurchaseYn": "",
+   "marketingData": "i_2608017396_8",
+   "itemSellPossYn": "Y",
+   "reservationYn": "N",
+   "reservationSellYn": "N",
+   "sellingpointCon": "",
+   "rbestFluctuationRank": "",
+   "updateTime": "",
+   "reqId": "",
+   "colorChip": [
+    {
+     "colorNo": "0000001",
+     "colorName": "화이트",
+     "hexCode": "#FFFFFF"
+    },
+    {
+     "colorNo": "0000003",
+     "colorName": "블랙",
+     "hexCode": "#111111"
+    },
+    {
+     "colorNo": "0000004",
+     "colorName": "베이지",
+     "hexCode": "#D9C9A3"
+    },
+    {
+     "colorNo": "0000006",
+     "colorName": "버건디",
+     "hexCode": "#6D000A"
+    },
+    {
+     "colorNo": "0000010",
+     "colorName": "브라운",
+     "hexCode": "#8D5C33"
+    }
+   ],
+   "total": 0,
+   "dispOrder": 0,
+   "itemFlags": [
+    "우먼",
+    "S-L"
+   ],
+   "discontinuedYn": "N",
+   "sellEndYn": "N",
+   "upcomingYn": "N",
+   "unavailableYn": "N",
+   "soldOutYn": "N",
+   "saleStatus": "AVAILABLE",
+   "saleFlag": "",
+   "saleCode": "10"
+  }
+ ]
+}
