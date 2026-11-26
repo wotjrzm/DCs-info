@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 _site/
 .playwright-mcp/
+data/sale_items.json
