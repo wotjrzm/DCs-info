@@ -29,16 +29,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
           cache: pip
 
       - run: pip install -r requirements.txt
 
-      - run: pytest -q
+      - run: python -m pytest -q
 
       - name: Restore previous sale_items.json from deployed site
         run: |
@@ -78,7 +78,7 @@ jobs:
           if [ -d site ]; then cp -R site/. _site/; fi
           cp -R data/. _site/data/
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         if: github.ref == 'refs/heads/main'
 
       - name: Fail if collector failed
@@ -98,4 +98,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
