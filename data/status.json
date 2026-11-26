@@ -3,17 +3,17 @@
     "musinsa": {
       "alerted": false,
       "consecutive_failures": 0,
-      "last_success": "2026-11-26T17:32:45+09:00"
+      "last_success": "2026-11-26T17:38:25+09:00"
     },
     "spao": {
       "alerted": false,
       "consecutive_failures": 0,
-      "last_success": "2026-11-26T17:32:45+09:00"
+      "last_success": "2026-11-26T17:38:25+09:00"
     },
     "uniqlo": {
       "alerted": false,
       "consecutive_failures": 0,
-      "last_success": "2026-11-26T17:32:45+09:00"
+      "last_success": "2026-11-26T17:38:25+09:00"
     }
   }
 }
