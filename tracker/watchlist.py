@@ -1,11 +1,30 @@
 from __future__ import annotations
 
-from urllib.parse import urlsplit, urlunsplit
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+
+TRACKING_PARAMS = frozenset({"fbclid", "gclid", "igshid"})
+
+
+def _is_tracking(name: str) -> bool:
+    return name.startswith("utm_") or name in TRACKING_PARAMS
 
 
 def _normalize(token: str) -> str:
     parts = urlsplit(token)
-    return urlunsplit((parts.scheme, parts.netloc, parts.path.rstrip("/"), "", ""))
+    pairs = sorted(
+        (name, value)
+        for name, value in parse_qsl(parts.query, keep_blank_values=True)
+        if not _is_tracking(name)
+    )
+    return urlunsplit(
+        (
+            parts.scheme.lower(),
+            parts.netloc.lower(),
+            parts.path.rstrip("/"),
+            urlencode(pairs),
+            "",
+        )
+    )
 
 
 def parse_watchlist(text: str) -> list[str]:
