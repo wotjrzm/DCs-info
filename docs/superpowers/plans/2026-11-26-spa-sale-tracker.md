@@ -14,8 +14,10 @@
 
 - 저장소는 공개. 이메일 주소·비밀번호는 GitHub Secrets `GMAIL_ADDRESS`, `GMAIL_APP_PASSWORD`, `ALERT_TO`에만 둔다. 코드·로그·커밋에 절대 출력하지 않는다.
 - 스케줄: KST 08·12·18·22시 = cron `0 23,3,9,13 * * *` (UTC). `workflow_dispatch` 지원.
-- 세일 = 현재가 < 정가. 유니클로 기간한정가격 포함.
-- 알림 = 관심 상품 현재가 < 직전 기록가일 때만. 첫 수집은 기준값만 기록. 한 번 실행의 하락은 메일 한 통.
+- 세일 = 브랜드가 판단한 `Product.on_sale`. 무신사·SPAO는 현재가 < 정가, 유니클로는 가격인하 플래그(`discount`/`limitedOffer`/`colorSizeLimitedPrice`) 존재. 유니클로는 정가를 알 수 없음(`list_price=None`). GU 상품(이름이 "GU"로 시작) 제외.
+- 알림 = (a) 관심 상품 현재가 < 직전 기록가, 또는 (b) 직전 상태가 "세일 아님"(`off_sale: true`)이었는데 지금 세일 중 → "세일 시작". 첫 수집이 세일 중이면 기준값만 기록. 한 번 실행의 알림은 메일 한 통.
+- 무신사는 상세 페이지가 Cloudflare로 막힘 → 목록 API만 사용. 관심 상품은 세일 목록에서 product_id로 찾고, 없으면 "세일 아님(가격 미확인)".
+- 수집 경로·필드·fixture는 `docs/brand-notes.md`를 따른다.
 - 수집 실패 알림 = 브랜드 세일 목록 수집 3회 연속 실패 시 1회. 성공하면 리셋.
 - 가격 이력은 관심 상품만. `data/sale_items.json`은 덮어쓰기.
 - 요청 간 지연 1.5초, 세일 목록 페이지 상한 브랜드당 20페이지, 요청 타임아웃 20초. User-Agent는 일반 브라우저 문자열, 개인정보 없음.
@@ -64,9 +66,10 @@ README.md                     설치·설정 안내 (한국어)
 // data/watch.json   — 키는 "brand:product_id", 미지원/파싱 불가 URL은 키 "url:<정규화 URL>"
 {"items": {"uniqlo:E465185": {
    "url": "...", "brand": "uniqlo", "name": "...", "image_url": "...",
-   "list_price": 19900, "price": 14900,
+   "list_price": 19900, "price": 14900, "on_sale": true, "off_sale": false,
    "history": [{"at": "...", "price": 19900}, {"at": "...", "price": 14900}],
    "last_error": null}}}
+// list_price는 null 가능(유니클로). off_sale=true는 "세일 아님, 가격 미확인"(무신사 목록에 없음)
 // data/status.json
 {"brands": {"uniqlo": {"last_success": "...", "consecutive_failures": 0, "alerted": false}}}
 ```
@@ -101,18 +104,19 @@ README.md                     설치·설정 안내 (한국어)
 
 **Interfaces:**
 - Produces:
-  - `@dataclass(frozen=True) Product(brand: str, product_id: str, name: str, url: str, image_url: str, list_price: int, price: int)`; `Product.discount_rate -> int` (반올림 %); `Product.is_on_sale -> bool`; `Product.to_dict() -> dict` (`discount_rate` 포함)
-  - `@dataclass(frozen=True) PriceDrop(key: str, name: str, url: str, previous: int, current: int, list_price: int, is_lowest: bool)`
+  - `@dataclass(frozen=True) Product(brand: str, product_id: str, name: str, url: str, image_url: str, list_price: int | None, price: int, on_sale: bool)`; `Product.discount_rate -> int | None` (반올림 %, `list_price`가 None이거나 ≤ price면 None); `Product.to_dict() -> dict` (`discount_rate` 포함)
+  - `@dataclass(frozen=True) PriceDrop(key: str, kind: str, name: str, url: str, previous: int | None, current: int, list_price: int | None, is_lowest: bool)` — `kind`는 `"drop"` 또는 `"sale_start"`
   - `parse_watchlist(text: str) -> list[str]` — 정규화된 URL 목록, 순서 유지, 중복 제거
 
 - [ ] **Step 1: 실패하는 테스트 작성**
 
 ```python
 def test_discount_rate():
-    p = Product("uniqlo", "E1", "n", "u", "i", list_price=19900, price=14900)
-    assert p.discount_rate == 25 and p.is_on_sale
-def test_not_on_sale_when_equal():
-    assert not Product("uniqlo", "E1", "n", "u", "i", 19900, 19900).is_on_sale
+    p = Product("spao", "E1", "n", "u", "i", list_price=19900, price=14900, on_sale=True)
+    assert p.discount_rate == 25
+def test_discount_rate_none_without_list_price():
+    assert Product("uniqlo", "E1", "n", "u", "i", None, 19900, True).discount_rate is None
+    assert Product("spao", "E1", "n", "u", "i", 19900, 19900, False).discount_rate is None
 def test_parse_watchlist_skips_comments_blank_and_trailing_text():
     text = "# c\n\n  https://a.com/p/1?utm_source=x#top  M\nhttps://a.com/p/1\n"
     assert parse_watchlist(text) == ["https://a.com/p/1"]
@@ -133,6 +137,8 @@ def test_parse_watchlist_skips_comments_blank_and_trailing_text():
 - Produces:
   - `record_price(entry: dict | None, product: Product, now: str) -> tuple[dict, PriceDrop | None]` — watch.json 항목 하나를 갱신해 새 dict 반환. `key`는 `f"{brand}:{product_id}"`.
   - `record_error(entry: dict | None, url: str, error: str) -> dict` — 이력 보존, `last_error`만 설정
+  - `record_off_sale(entry: dict | None, url: str) -> dict` — "세일 아님, 가격 미확인": `off_sale=True`, `on_sale=False`, `last_error=None`, 이력 보존
+  - `record_price`의 알림 규칙: (1) 직전 항목이 `off_sale=True`이고 `product.on_sale`이면 `kind="sale_start"` (이력이 없어도, `previous`는 직전 이력가 또는 None); (2) 아니면 이력이 있고 현재가 < 직전 이력가면 `kind="drop"`; (3) 그 외 None. 항상 `off_sale=False`로 갱신.
   - `update_brand_status(status: dict | None, ok: bool, now: str) -> tuple[dict, bool]` — bool = 지금 실패 알림을 보낼지
   - `FAILURE_ALERT_THRESHOLD = 3`
 
@@ -154,6 +160,14 @@ def test_drop_after_rise_not_lowest():
     # 14900 -> 19900 -> 16900 : 하락이지만 최저가 아님
     ...
     assert d.previous == 19900 and not d.is_lowest
+def test_off_sale_then_on_sale_is_sale_start():
+    e = record_off_sale(None, "u")
+    e, d = record_price(e, P(price=29900, on_sale=True), "t1")
+    assert d.kind == "sale_start" and d.previous is None and e["off_sale"] is False
+def test_off_sale_then_seen_not_on_sale_no_alert():
+    e = record_off_sale(None, "u")
+    e, d = record_price(e, P(price=29900, on_sale=False), "t1")
+    assert d is None
 def test_success_clears_last_error():
     e = record_error(None, "u", "boom"); e, _ = record_price(e, P(), "t")
     assert e["last_error"] is None
@@ -187,9 +201,15 @@ def test_failure_alert_fires_once_at_third_then_resets():
 
 ```python
 def test_drop_email():
-    subj, body = build_drop_email([D(name="히트텍", previous=19900, current=14900, list_price=19900, is_lowest=True, url="https://x")])
+    subj, body = build_drop_email([D(kind="drop", name="히트텍", previous=19900, current=14900, list_price=19900, is_lowest=True, url="https://x")])
     assert subj == "[세일 알림] 1개 상품 가격 하락"
     assert "히트텍" in body and "19,900원 → 14,900원" in body and "25%" in body and "역대 최저가" in body and "https://x" in body
+def test_sale_start_email_line():
+    _, body = build_drop_email([D(kind="sale_start", name="셔츠", previous=None, current=24900, list_price=29900, is_lowest=False, url="https://y")])
+    assert "세일 시작" in body and "24,900원" in body and "17%" in body
+def test_drop_email_without_list_price_omits_rate():
+    _, body = build_drop_email([D(kind="drop", name="n", previous=19900, current=14900, list_price=None, is_lowest=False, url="u")])
+    assert "%" not in body
 def test_failure_email():
     subj, _ = build_failure_email(["musinsa"])
     assert subj == "[세일 트래커] musinsa 수집 3회 연속 실패"
@@ -214,7 +234,7 @@ def test_send_email_uses_smtp(monkeypatch):  # smtplib.SMTP_SSL를 가짜로 바
 - Consumes: `Product`, `docs/brand-notes.md`의 유니클로 항목, fixtures
 - Produces:
   - `class FetchError(Exception)`
-  - `class Brand(Protocol)`: `name: str`; `matches(url: str) -> bool`; `product_id(url: str) -> str`; `fetch_sale_items(session: Session) -> list[Product]`; `fetch_product(session: Session, url: str) -> Product`. 실패는 항상 `FetchError`(네트워크, 비정상 상태 코드, 가격 누락·0 포함).
+  - `class Brand(Protocol)`: `name: str`; `matches(url: str) -> bool`; `product_id(url: str) -> str`; `fetch_sale_items(session: Session) -> list[Product]`; `fetch_product(session: Session, url: str, sale_items: list[Product] | None) -> Product | None`. `None` = "세일 아님, 가격 미확인"(무신사 전용: 이번 실행의 세일 목록에서 product_id로 찾고 없으면 None; 세일 목록 수집에 실패해 `sale_items is None`이면 `FetchError`). 유니클로·SPAO는 `sale_items`를 무시하고 상세를 조회. 실패는 항상 `FetchError`(네트워크, 비정상 상태 코드, 가격 누락·0 포함).
   - `make_session() -> requests.Session` (UA, 타임아웃 20초 기본), `polite_get(session, url, **kw) -> Response` (요청 전 1.5초 지연; 테스트에서 지연 0으로 바꿀 수 있게 모듈 상수 `DELAY_SECONDS`)
   - `BRANDS: list[Brand]`, `brand_for_url(url: str) -> Brand | None`
 
@@ -223,7 +243,8 @@ def test_send_email_uses_smtp(monkeypatch):  # smtplib.SMTP_SSL를 가짜로 바
 ```python
 def test_parse_sale_page_returns_only_on_sale_items():
     items = uniqlo.parse_sale_page(load_fixture("uniqlo/sale_page.json"))
-    assert items and all(p.is_on_sale and p.brand == "uniqlo" for p in items)
+    assert items and all(p.on_sale and p.brand == "uniqlo" and p.list_price is None for p in items)
+    assert not any(p.name.startswith("GU") for p in items)
 def test_parse_product_discounted():  # fixture의 실제 값으로 기대값 작성
 def test_parse_product_missing_price_raises_fetch_error():
 def test_product_id_ignores_query_and_mobile_variants():  # brand-notes의 URL 변형 각각
@@ -238,7 +259,7 @@ def test_brand_for_url():
 
 ### Task 6: 무신사 스탠다드
 
-Task 5와 같은 구조와 테스트 세트. **Files:** `tracker/brands/musinsa.py`, `tests/brands/test_musinsa.py`. `name = "musinsa"`. 세일 목록은 브랜드 `musinsastandard` 한정. `BRANDS`에 등록. Commit `feat: add Musinsa Standard scraper`. (Task 1 게이트에서 제외로 결정되면 이 Task는 건너뛴다.)
+Task 5와 같은 구조와 테스트 세트. **Files:** `tracker/brands/musinsa.py`, `tests/brands/test_musinsa.py`. `name = "musinsa"`. 세일 목록은 브랜드 `musinsastandard` 한정, 할인율순으로 `saleRate == 0`이 나오면 중단(페이지 상한 20 유지). 상세 페이지는 쓰지 않는다. `fetch_product`는 `sale_items`에서 product_id로 찾고 없으면 None, `sale_items is None`이면 FetchError — 이 세 경우 테스트 추가. `BRANDS`에 등록. Commit `feat: add Musinsa Standard scraper`. (Task 1 게이트에서 제외로 결정되면 이 Task는 건너뛴다.)
 
 ### Task 7: SPAO
 
@@ -257,7 +278,7 @@ Task 5와 같은 구조와 테스트 세트. **Files:** `tracker/brands/spao.py`
 처리 순서:
 1. `data/*.json` 읽기(없으면 빈 구조).
 2. 브랜드마다 `fetch_sale_items` → 성공 시 그 브랜드 항목 교체, 실패 시 직전 항목 유지. `update_brand_status`로 실패 알림 대상 수집.
-3. `watchlist.txt`의 각 URL: 브랜드 없음 → `record_error(..., "지원하지 않는 브랜드")`; `fetch_product` 성공 → `record_price`; `FetchError` → `record_error`. watchlist에서 빠진 키는 `watch.json`에서 제거.
+3. `watchlist.txt`의 각 URL: 브랜드 없음 → `record_error(..., "지원하지 않는 브랜드")`; `fetch_product(session, url, 이번 실행에서 그 브랜드 세일 목록 수집 성공 시 그 목록, 실패 시 None)` → Product면 `record_price`, None이면 `record_off_sale`; `FetchError` → `record_error`. watchlist에서 빠진 키는 `watch.json`에서 제거.
 4. JSON 세 파일 저장(정렬된 키, `ensure_ascii=False`, indent 2). 세일 목록은 할인율 내림차순.
 5. 하락이 있으면 하락 메일, 실패 알림 대상이 있으면 실패 메일. `MailNotConfigured`면 경고만 출력하고 0. 발송 예외면 1 반환(데이터는 이미 저장됨).
 
@@ -273,6 +294,8 @@ def test_unsupported_url_recorded_as_error(tmp_path): ...
 def test_removed_watchlist_url_dropped(tmp_path): ...
 def test_send_failure_saves_data_and_returns_1(tmp_path): ...    # Review Focus 4
 def test_third_consecutive_failure_sends_failure_email(tmp_path): ...
+def test_watched_item_absent_then_in_sale_list_sends_sale_start(tmp_path): ...  # 무신사형 가짜 브랜드, 두 번 실행
+def test_sale_list_failure_does_not_mark_watched_off_sale(tmp_path): ...  # sale_items None → FetchError → last_error, off_sale 상태 변화 없음
 ```
 - [ ] **Step 2:** → FAIL
 - [ ] **Step 3:** 구현
@@ -311,7 +334,8 @@ def test_third_consecutive_failure_sends_failure_email(tmp_path): ...
 내용(스펙 화면 스케치 기준):
 - 상단: 검색어, 브랜드, 최소 할인율, 최대 가격 필터. 필터는 둘러보기 영역에만 적용.
 - 관심 상품: 카드마다 이미지, 이름, 현재가, 정가, 할인율, 이력 기반 인라인 SVG 스파크라인, 현재가 == 이력 최솟값이고 이력 2개 이상이면 "최저가" 배지. `last_error`가 있으면 오류 문구와 원본 링크.
-- 둘러보기: 할인율 내림차순 카드 그리드. 카드의 "관심 추가" = `navigator.clipboard.writeText(url)` 후 `https://github.com/<owner>/<repo>/edit/main/watchlist.txt`를 새 탭으로 연다. owner/repo는 `app.js` 상단 상수.
+- `discount_rate`가 null인 상품(유니클로)은 할인율 대신 "가격인하" 배지, 정가 줄은 생략. 관심 상품의 `off_sale`이면 "세일 아님" 표시.
+- 둘러보기: 할인율 내림차순 카드 그리드(할인율 null은 맨 뒤, 그 안에서는 가격 오름차순). 최소 할인율 필터를 걸면 null 상품은 제외. 카드의 "관심 추가" = `navigator.clipboard.writeText(url)` 후 `https://github.com/<owner>/<repo>/edit/main/watchlist.txt`를 새 탭으로 연다. owner/repo는 `app.js` 상단 상수.
 - 하단(또는 상단 작은 글씨): 브랜드별 마지막 수집 시각, 실패 중이면 경고 표시.
 - 모바일 우선 반응형, 라이트/다크 대응. 이미지는 `loading="lazy"`.
 
